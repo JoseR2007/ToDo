@@ -27,6 +27,7 @@ header {
         padding: 0.2em 0.5em 0.2em 0.5em;
         border: 1px solid transparent;
         border-radius: 0.5em;
+        outline: none;
     }
     #agregar {
         background: white;
@@ -38,4 +39,20 @@ header {
 #tareas {
     background: #222;
     height: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em 0 0.5em 0;
+}
+
+
+.clasTarea {
+    width: calc(100% - 2%);
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 0.3em;
+}
+.clasTarea + .clasTarea {
+    margin-top: 1em;
 }
