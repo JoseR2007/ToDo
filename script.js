@@ -9,9 +9,12 @@ btnAgregar.addEventListener("click", ()=>{
   }
   const article = document.createElement('article');
   const h2 = document.createElement('h2');
+  const p = document.createElement('p');
     
   h2.append(tareaInput.value);
+  p.append(obtenerHora());
   article.appendChild(h2);
+  article.appendChild(p);
   article.classList.add('clasTarea');
   tabla.appendChild(article);
   tareaInput.value = " ";
@@ -23,4 +26,13 @@ const comprobarLong = () => {
     return false;
   } 
   return true;
+}
+
+const obtenerHora = () => {
+  const date = new Date;
+  if (date.getMinutes() < 12) {
+    const hora = `${date.getHours()}:${date.getMinutes()}AM`;
+  }
+  const hora = `${date.getHours()}:${date.getMinutes()}PM`;
+  return hora
 }
