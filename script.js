@@ -1,8 +1,9 @@
-const btnAgregar = document.getElementById('agregar');
 const tareaInput = document.getElementById('tarea');
 const tabla = document.getElementById('tareas');
+const from = document.getElementById('parametros');
 
-btnAgregar.addEventListener("click", ()=>{
+from.addEventListener("submit", (event)=>{
+  event.preventDefault();
   if (comprobarLong() === false) {
     console.error('Aun no has escrito nada');
     return;
