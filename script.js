@@ -18,6 +18,13 @@ btnAgregar.addEventListener("click", ()=>{
   article.classList.add('clasTarea');
   tabla.appendChild(article);
   tareaInput.value = " ";
+
+  article.addEventListener("dblclick", ()=>{
+    tabla.removeChild(article);
+  })
+  article.addEventListener("click", ()=>{
+    article.classList.add('complete');
+  })
 })
 
 const comprobarLong = () => {

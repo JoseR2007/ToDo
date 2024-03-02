@@ -7,7 +7,9 @@
 body {
     background: #111;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 main {
     width: calc(100% - 20%);
@@ -17,6 +19,7 @@ header {
     color: white;
     background: #232625;
     text-align: center;
+    border-radius: 0.5em 0.5em 0 0;
 }
 #parametros {
     padding: 0.2em 0 0.2em 0;
@@ -34,6 +37,7 @@ header {
         border: 1px solid transparent;
         padding: 0.2em 0.5em 0.2em 0.5em;
         border-radius: 0.5em;
+        cursor: pointer;
     }
 }
 #tareas {
@@ -43,6 +47,10 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 0.5em 0 0.5em 0;
+    border-radius: 0 0 0.5em 0.5em;
+}
+#intrucciones {
+    color: white;
 }
 
 
@@ -52,7 +60,17 @@ header {
     text-align: center;
     border: 2px solid white;
     border-radius: 0.3em;
+    cursor: pointer;
+    user-select: none;
 }
 .clasTarea + .clasTarea {
     margin-top: 1em;
+}
+.complete {
+    border: 2px solid gray;
+    color: gray;
+
+    h2 {
+        text-decoration: line-through;
+    }
 }
